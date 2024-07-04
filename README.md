@@ -14,11 +14,11 @@ This repository contains a lightweight C++ program designed to demonstrate fuzz 
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/afl-cpp.git
+    git clone https://github.com/BowTiedRadone/cpp-aflPlusPlus.git
     ```
 2. Build the program using `afl-clang-fast++`:
     ```sh
-    cd afl-cpp
+    cd cpp-aflPlusPlus
     afl-clang-fast++ -o test test.cpp
     ```
     Optionally, you can build with sanitizers enabled (e.g., AddressSanitizer):
