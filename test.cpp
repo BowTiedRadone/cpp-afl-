@@ -22,13 +22,13 @@ int main(int argc, char *argv[]) {
     // Ensure null-terminated string
     buffer.push_back('\0');
 
-    // Potential buffer overflow
-    char charBuffer[100];
-
-    std::copy(buffer.begin(), buffer.end(), charBuffer);
-    charBuffer[std::min(buffer.size(), sizeof(charBuffer) - 1)] = '\0'; // Ensure null-terminated
-
-    std::cout << "Buffer content: " << charBuffer << std::endl;
+    // Inserting an infinite loop conditionally
+    if (buffer.size() > 200) {
+        while (true) {
+            buffer.push_back('\0');
+            // This loop will continue indefinitely if buffer size is greater than 200
+        }
+    }
 
     return 0;
 }
